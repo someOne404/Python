@@ -1,2 +1,2 @@
 # Python
-Course work for CS1110
+CS1110
