@@ -10,5 +10,3 @@ tens_digit = (num // 10) % 10
 hundred_digit = (num // 100) % 10
 thousands_digit = (num // 1000) % 10
 roman = thousands[thousands_digit] + hundreds[hundred_digit] + tens[tens_digit] + ones[ones_digit]
-
-return roman
