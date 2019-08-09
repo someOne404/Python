@@ -1,9 +1,14 @@
-number = int(input('A number: '))
+num = int(input('A number: '))
 
+ones = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX']
 tens = ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC']
-tens_digit = (number // 10) % 10
-part = tens[tens_digit]
+hundreds = ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM']
+thousands = ['', 'M', 'MM', 'MMM']
 
-print(part)
+ones_digit = num % 10
+tens_digit = (num // 10) % 10
+hundred_digit = (num // 100) % 10
+thousands_digit = (num // 1000) % 10
+roman = thousands[thousands_digit] + hundreds[hundred_digit] + tens[tens_digit] + ones[ones_digit]
 
-print(['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'][(number // 10) % 10])
+return roman
